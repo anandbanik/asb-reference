@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "920ba680-a05b-4a20-8f7a-3d3cc6b9b40e",
+		"name": "Asb-Reference",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SendMsgToAsbQueue",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"storeId\":\"876711\",\n\t\"gtin\":\"31234141\",\n\t\"lotNo\":\"644644654654646\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:9081/asb-reference/asb/scan/queue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9081",
+					"path": [
+						"asb-reference",
+						"asb",
+						"scan",
+						"queue"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

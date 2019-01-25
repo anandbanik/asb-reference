@@ -1,0 +1,15 @@
+
+
+version: '2'
+
+services:
+  tomcat.asb.dev.com:
+    container_name: tomcat.asb.dev.com
+    image: anandbanik/tomcat9
+    environment:
+      - ASB_ENDPOINT=Endpoint=sb://asb-fspt-dev1-dmz.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=X3BdVMu8GVDkVxogPt4/HAAjmAPM0fKShfEoru8pIP8=
+      - ASB_QUEUENAME=queue1-dev1-dmz-fspt
+    ports:
+      - 9081:8080
+    volumes:
+      - ./target/asb-reference.war:/usr/local/tomcat/webapps/asb-reference.war
